@@ -17,7 +17,6 @@ const initialState = {
       facebook: "https://www.facebook.com",
       twitter: "https://www.twitter.com",
       discord: "https://www.discord.com",
-      
     },
   ],
 };
