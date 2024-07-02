@@ -17,6 +17,9 @@ const initialState = {
       facebook: "https://www.facebook.com",
       twitter: "https://www.twitter.com",
       discord: "https://www.discord.com",
+      textColor: "white",
+      buttonColor: "gray",
+      socialColor: "white",
     },
   ],
 };
@@ -28,9 +31,16 @@ const userSlice = createSlice({
     addUser: (state, action) => {
       state.users.push(action.payload);
     },
+    updateUser: (state, action) => {
+      const { id, updatedUser } = action.payload;
+      const existingUser = state.users.find((user) => user.id === id);
+      if (existingUser) {
+        Object.assign(existingUser, updatedUser);
+      }
+    },
   },
 });
 
-export const { addUser } = userSlice.actions;
+export const { addUser, updateUser } = userSlice.actions;
 
 export default userSlice.reducer;

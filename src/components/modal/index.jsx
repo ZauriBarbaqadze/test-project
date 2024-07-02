@@ -1,6 +1,6 @@
 import React from "react";
 
-const index = ({ title, content, visible }) => {
+const index = ({ title, content, visible, exit, save }) => {
   return (
     <div
       className="modal"
@@ -12,6 +12,7 @@ const index = ({ title, content, visible }) => {
           <div className="modal-header">
             <h5 className="modal-title">{title}</h5>
             <button
+              onClick={exit}
               type="button"
               className="btn-close"
               data-bs-dismiss="modal"
@@ -27,7 +28,7 @@ const index = ({ title, content, visible }) => {
             >
               Close
             </button> */}
-            <button type="button" className="btn btn-primary">
+            <button type="button" className="btn btn-primary" onClick={save}>
               Save Changes
             </button>
           </div>

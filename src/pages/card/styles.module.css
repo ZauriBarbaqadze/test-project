@@ -19,7 +19,7 @@
 .image img {
   width: 150px;
   height: 150px;
-  border-radius: 50%;
+  border-radius: 44% 56% 57% 43% / 74% 42% 58% 26%;
   padding: 5px;
   border: white 3px solid;
   /* aspect-ratio: auto 150 / 150; */
